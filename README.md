@@ -11,10 +11,23 @@ This lib resolves Consul services by name.
 
 Somewhere in your `init` code: 
 ```go
+import (
+    "github.com/ekomobile/grpc-consul-resolver"
+)
+
+// Will query consul every 5 seconds.
 resolver.RegisterDefault(time.Second * 5)
 ```
 
 Getting connection:
 ```go
 conn, err := grpc.DialContext(ctx, "srv://consul/my-awesome-service")
+```
+With round-robin balancer:
+```go
+import (
+    "google.golang.org/grpc/balancer/roundrobin"
+)
+
+conn, err := grpc.DialContext(ctx, "srv://consul/my-awesome-service", grpc.WithBalancerName(roundrobin.Name))
 ```
