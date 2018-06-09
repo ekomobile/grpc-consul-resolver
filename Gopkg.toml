@@ -28,11 +28,3 @@
 [prune]
   go-tests = true
   unused-packages = true
-
-[[constraint]]
-  name = "google.golang.org/grpc"
-  version = "~1.11.1"
-
-[[constraint]]
-  name = "github.com/hashicorp/consul"
-  version = "~1.0.7"
