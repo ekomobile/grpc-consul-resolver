@@ -12,7 +12,7 @@ type ConsulResolverBuilder struct {
 	ConsulClientConfig *api.Config
 }
 
-func (b *ConsulResolverBuilder) Build(target resolver.Target, cc resolver.ClientConn, opts resolver.BuildOption) (resolver.Resolver, error) {
+func (b *ConsulResolverBuilder) Build(target resolver.Target, cc resolver.ClientConn, opts resolver.BuildOptions) (resolver.Resolver, error) {
 	consul, err := api.NewClient(b.ConsulClientConfig)
 	if err != nil {
 		return nil, err

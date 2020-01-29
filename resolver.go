@@ -23,7 +23,7 @@ type ConsulResolver struct {
 	watchInterval time.Duration
 }
 
-func (r *ConsulResolver) ResolveNow(resolver.ResolveNowOption) {
+func (r *ConsulResolver) ResolveNow(resolver.ResolveNowOptions) {
 	r.resolve()
 }
 

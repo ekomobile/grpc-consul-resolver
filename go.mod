@@ -1,4 +1,4 @@
-module github.com/ekomobile/grpc-consul-resolver
+module github.com/ekomobile/grpc-consul-resolver/v2
 
 go 1.12
 
@@ -10,5 +10,5 @@ require (
 	github.com/hashicorp/golang-lru v0.5.4 // indirect
 	github.com/hashicorp/serf v0.8.5 // indirect
 	github.com/miekg/dns v1.1.1 // indirect
-	google.golang.org/grpc v1.26.0
+	google.golang.org/grpc v1.27.0
 )
